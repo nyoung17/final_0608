@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>final.index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #FAF6E7;
+        }
+
+        #wrap {
+            width: 1920px;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 100%;
+            height: 180px;
+            position: relative;
+        }
+
+
+        #logo {
+            position: absolute;
+            margin-left: 100px;
+            margin-top: 30px;
+        }
+
+        #logo img:hover {
+            width: 125px;
+            margin-top: 10px;
+        }
+
+        #main_menu {
+            position: absolute;
+            top: 60px;
+            right: 60px;
+        }
+
+        #main_menu li {
+            display: inline;
+            list-style-type: none;
+            margin: 0 40px 0 0;
+        }
+
+        #main_menu a {
+            text-decoration: none;
+            font-family: '상상토끼 정묵바위', sans-serif;
+            color: #7C3525;
+            font-size: 40px;
+        }
+
+        #main_menu a:hover {
+            color: rgb(255, 162, 0);
+        }
+
+
+        aside {
+            width: 50%;
+            height: 689px;
+            float: left;
+            align-items: center;
+            position: relative;
+        }
+
+        aside img {
+            position: absolute;
+            width: 350px;
+            margin-left: 450px;
+            margin-top: 60px;
+            z-index: 1;
+        }
+
+        section {
+            float: left;
+            width: 50%;
+            height: 689px;
+        }
+
+        .note {
+            position: relative;
+            display: inline-block;
+        }
+
+        .note img {
+            display: block;
+            width: 600px;
+            z-index: 1;
+        }
+
+        .note h2 {
+            font-family: '휴먼편지체';
+            margin-left: 172px;
+            margin-top: -554px;
+            color: #5E4540;
+            font-size: 20px;
+        }
+
+        .note p {
+            font-family: '휴먼편지체';
+            color: #5E4540;
+            font-weight: bold;
+            margin-left: 38px;
+            margin-top: 13px;
+        }
+
+        .note h3 {
+            font-family: '휴먼편지체';
+            margin-left: 37px;
+            margin-top: -7px;
+            color: #e23613;
+            font-size: 18px;
+        }
+
+        .note h1 {
+            font-family: '휴먼편지체';
+            margin-left: 170px;
+            margin-top: 30px;
+            color: #5E4540;
+        }
+
+        .container {
+            width: 350px;
+            height: 500px;
+            padding: 30px;
+            border-radius: 30px;
+            background-color: #ffce51;
+            color: white;
+            border: 2px solid #c2c2c2;
+            box-shadow: 0 0 10px rgb(189, 189, 189);
+            margin-left: 520px;
+            margin-top: 60px;
+        }
+
+        .screen {
+            margin-left: -8px;
+            height: 100px;
+            width: 300px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 200%;
+            margin-bottom: 25px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            color: rgb(138, 138, 138);
+        }
+
+        .buttons {
+            margin-left: -8px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+
+        }
+
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            width: 50px;
+            border: none;
+            font-size: 0.8rem;
+            color: rgb(86, 86, 86);
+            border-radius: 8px 8px 7px 7px;
+            padding: 1em 2.5em;
+            border-bottom: 0.4em solid rgba(161, 58, 58, 0.3);
+            font-weight: bold;
+            box-shadow: 5px 5px #bb7411;
+        }
+
+        .button:active {
+            border: 0;
+            background-color: rgb(255, 145, 0);
+            margin-top: 2px;
+        }
+
+        .grey {
+            background-color: #FFB800;
+        }
+
+        .orange {
+            background-color: #FFB800;
+        }
+
+
+        footer {
+            width: 100%;
+            height: 100px;
+            background: #5E4540;
+            text-align: center;
+            color: white;
+            clear: both;
+        }
+
+        footer ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        footer li {
+            margin: 37px 150px;
+            list-style-type: none;
+        }
+
+        footer small {
+            color: #c7c3ba;
+            font-style: .875rem;
+        }
+
+        /* 화면 넓이가 0~1920px */
+        @media (max-width: 1940px) {
+            #wrap {
+                width: 100%;
+            }
+        }
+
+        /* 화면 넓이가 0~1280px */
+        @media (max-width: 1280px) {
+            #wrap {
+                width: 100%;
+            }
+
+            .container {
+                margin-top: 60px;
+                margin-left: 90px;
+            }
+
+            footer li {
+                margin: 37px 100px;
+            }
+        }
+
+        /* 화면 넓이가 0~768x */
+        @media (max-width: 768px) {
+            #wrap {
+                width: 100%;
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+
+            header {
+                width: 100%;
+                height: 360px;
+            }
+
+            header img {
+                width: 65px;
+            }
+
+            #logo {
+                margin-left: 20px;
+                margin-top: 15px;
+            }
+
+            #logo img:hover {
+                width: 60px;
+            }
+
+            #main_menu {
+                width: 100%;
+                text-align: center;
+            }
+
+            #main_menu li {
+                width: 100%;
+                padding: 10px;
+                display: block;
+                margin-left: 55px;
+                text-align: center;
+            }
+
+            #main_menu a {
+                font-size: 20px;
+            }
+
+            aside {
+                float: none;
+                width: 100%;
+                height: 550px;
+            }
+
+            section {
+                float: none;
+                width: 100%;
+                height: 550px;
+            }
+
+            section img {
+                width: 390px;
+                margin-top: 35px;
+                margin-left: 90px;
+            }
+
+            .container {
+                margin-top: 10px;
+                margin-left: 65px;
+            }
+
+            .note img {
+                display: block;
+                width: 400px;
+                z-index: 1;
+            }
+
+            .note h2 {
+                font-family: '휴먼편지체';
+                margin-left: 202px;
+                margin-top: -374px;
+                color: #5E4540;
+                font-size: 15px;
+            }
+
+            .note p {
+                font-family: '휴먼편지체';
+                color: #5E4540;
+                font-weight: bold;
+                margin-left: 118px;
+                margin-top: 13px;
+                font-size: 10px;
+            }
+
+            .note h3 {
+                font-family: '휴먼편지체';
+                margin-left: 117px;
+                margin-top: -2px;
+                color: #e23613;
+                font-size: 12px;
+            }
+
+            .note h1 {
+                font-family: '휴먼편지체';
+                margin-left: 200px;
+                margin-top: 30px;
+                color: #5E4540;
+                font-size: 17px;
+            }
+
+            footer li {
+                margin: 37px 10px;
+                font-size: 15px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div id="logo">
+                <a href="index.html">
+                    <img src="./img/logo.png" alt="" width="130">
+                </a>
+            </div>
+            <ul id="main_menu">
+                <li><a href="page1.html">1일차</a></li>
+                <li><a href="page2.html">2일차</a></li>
+                <li><a href="page3.html">가계부</a></li>
+                <li><a href="page4.html">갤러리</a></li>
+                <li><a href="page5.html">추천</a></li>
+            </ul>
+        </header>
+
+        <aside>
+            <div class="container">
+                <div class="screen">2,500 &nbsp</div>
+
+                <div class="buttons">
+                    <div class="button grey">AC</div>
+                    <div class="button grey">+&nbsp/&nbsp-</div>
+                    <div class="button grey">%</div>
+                    <div class="button">/</div>
+                    <div class="button">7</div>
+                    <div class="button">8</div>
+                    <div class="button">9</div>
+                    <div class="button orange">*</div>
+                    <div class="button">4</div>
+                    <div class="button">5</div>
+                    <div class="button">6</div>
+                    <div class="button orange">-</div>
+                    <div class="button">1</div>
+                    <div class="button">2</div>
+                    <div class="button">3</div>
+                    <div class="button orange">+</div>
+                    <div class="button">0</div>
+                    <div class="button">.</div>
+                    <div class="button">(&nbsp&nbsp)</div>
+                    <div class="button orange">=</div>
+                </div>
+            </div>
+        </aside>
+
+        <section>
+            <div class="note">
+                <img src="./img/sub5.png" alt="">
+                <h2>이번주 가계부... </h2>
+                <p>- 배달 했을 때, &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp - 집에서 해먹었을
+                    때,<br><br>
+                    &nbsp OO치킨 : 21600원 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 알배기 배추 : 5600원<br><br>
+                    &nbsp OO치킨 배달비 : 4000원 &nbsp&nbsp&nbsp &nbsp 감자 : 6610원<br><br>
+                    &nbsp 백채O김치찌개 : 10000원 &nbsp&nbsp &nbsp 당근 : 5320원<br><br>
+                    &nbsp&nbsp '&nbsp' &nbsp배달비 X 포장함 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp 배달비 X 집 앞 마트 이용 <br><br>
+                    &nbsp 그릭요거트 : 14300원 <br><br>
+                    &nbsp 그릭요거트 배달비 : 2500원 <br><br>
+                    &nbsp 마라쿵푸 : 18000원 <br><br>
+                    &nbsp 마라쿵푸 배달비 : 1500원 <br><br> </p>
+                <h3>총 합계 : 71 , 900원 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 총 합계 : 17 , 530원</h3>
+                <h1>배달 < 집밥 </h1>
+            </div>
+        </section>
+
+        <footer>
+            <ul id="footer_menu">
+                <li>집밥 오선생 레시피</li>
+                <li>22161033 오나영</li>
+                <li>ony8817@kaywon.ac.kr</li>
+            </ul>
+
+        </footer>
+    </div>
+</body>
+
+</html>

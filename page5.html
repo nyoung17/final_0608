@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>final.index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #FAF6E7;
+        }
+
+        #wrap {
+            width: 1920px;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 100%;
+            height: 180px;
+            position: relative;
+        }
+
+
+        #logo {
+            position: absolute;
+            margin-left: 100px;
+            margin-top: 30px;
+        }
+
+        #logo img:hover {
+            width: 125px;
+            margin-top: 10px;
+        }
+
+        #main_menu {
+            position: absolute;
+            top: 60px;
+            right: 60px;
+        }
+
+        #main_menu li {
+            display: inline;
+            list-style-type: none;
+            margin: 0 40px 0 0;
+        }
+
+        #main_menu a {
+            text-decoration: none;
+            font-family: '상상토끼 정묵바위', sans-serif;
+            color: #7C3525;
+            font-size: 40px;
+        }
+
+        #main_menu a:hover {
+            color: rgb(255, 162, 0);
+        }
+
+        nav {
+            width: 33.3333%;
+            height: 689px;
+            float: left;
+        }
+
+        aside {
+            width: 33.3333%;
+            height: 689px;
+            float: left;
+            align-items: center;
+        }
+
+
+        section {
+            float: left;
+            width: 33.3333%;
+            height: 689px;
+        }
+
+        .container1 {
+            background-image: url("./img/bgbg1.png");
+            background-size: cover;
+            /* 이미지를 컨테이너에 가득 채우도록 조절 */
+            border-radius: 10px;
+            width: 390px;
+            height: 575px;
+            border: solid 2px #9C9C9C;
+            position: absolute;
+            top: 200px;
+            left: 345px;
+            margin: 15px 0 0 15px;
+            animation: slideDown 1s ease forwards;
+            /* Existing CSS properties remain the same */
+            font-family: '휴먼편지체';
+        }
+
+        .container1 {
+            text-align: center;
+            color: #5E4540;
+            font-weight: bold;
+        }
+
+        .container1 h1 {
+            margin-top: 50px;
+            font-size: 30px;
+        }
+
+        .container1 p {
+            margin-top: 200px;
+        }
+
+        .container1 button {
+            margin-top: 50px;
+            background-color: #5E4540;
+            color: white;
+        }
+
+        .container1 button:hover {
+            background-color: #ff9500;
+            color: white;
+        }
+
+
+        .container2 {
+            background-image: url("./img/bgbg2.png");
+            background-size: cover;
+            /* 이미지를 컨테이너에 가득 채우도록 조절 */
+            background-color: #ffffff;
+            border-radius: 10px;
+            width: 390px;
+            height: 575px;
+            border: solid 2px #9C9C9C;
+            position: absolute;
+            top: -575px;
+            /* 초기 위치를 위로 이동시킴 */
+            left: 780px;
+            margin: 15px 0 0 15px;
+            animation: slideDown 1s ease forwards;
+            /* Existing CSS properties remain the same */
+            font-family: '휴먼편지체';
+        }
+
+        .container2 {
+            text-align: center;
+            color: #5E4540;
+            font-weight: bold;
+        }
+
+        .container2 h1 {
+            margin-top: 50px;
+            font-size: 30px;
+        }
+
+        .container2 p {
+            margin-top: 220px;
+        }
+
+        .container2 button {
+            margin-top: 68px;
+            background-color: #5E4540;
+            color: white;
+        }
+
+        .container2 button:hover {
+            background-color: #ff9500;
+            color: white;
+        }
+
+        @keyframes slideDown {
+            0% {
+                top: -575px;
+                /* 시작 위치 */
+            }
+
+            100% {
+                top: 200px;
+                /* 최종 위치 */
+            }
+        }
+
+        .container3 {
+            background-image: url("./img/bgbg3.png");
+            background-size: cover;
+            /* 이미지를 컨테이너에 가득 채우도록 조절 */
+            background-color: #ffffff;
+            border-radius: 10px;
+            width: 390px;
+            height: 575px;
+            border: solid 2px #9C9C9C;
+            position: absolute;
+            top: 200px;
+            left: 1218px;
+            margin: 15px 0 0 15px;
+            animation: slideDown 1s ease forwards;
+            /* Existing CSS properties remain the same */
+            font-family: '휴먼편지체';
+        }
+
+        .container3 {
+            text-align: center;
+            color: #5E4540;
+            font-weight: bold;
+        }
+
+        .container3 h1 {
+            margin-top: 50px;
+            font-size: 30px;
+        }
+
+        .container3 p {
+            margin-top: 220px;
+        }
+
+        .container3 button {
+            margin-top: 68px;
+            background-color: #5E4540;
+            color: white;
+        }
+
+        .container3 button:hover {
+            background-color: #ff9500;
+            color: white;
+        }
+
+        
+
+
+
+        footer {
+            width: 100%;
+            height: 100px;
+            background: #5E4540;
+            text-align: center;
+            color: white;
+            clear: both;
+        }
+
+        footer ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        footer li {
+            margin: 37px 150px;
+            list-style-type: none;
+        }
+
+        footer small {
+            color: #c7c3ba;
+            font-style: .875rem;
+        }
+
+        /* 화면 넓이가 0~1920px */
+        @media (max-width: 1940px) {
+            #wrap {
+                width: 100%;
+            }
+        }
+
+        /* 화면 넓이가 0~1280px */
+        @media (max-width: 1280px) {
+            #wrap {
+                width: 100%;
+            }
+
+            nav {
+                float: none;
+                width: 50%;
+            }
+            .container1 {
+            background-image: url("./img/bgbg1.png");
+            background-size: cover;
+            /* 이미지를 컨테이너에 가득 채우도록 조절 */
+            border-radius: 10px;
+            width: 390px;
+            height: 575px;
+            border: solid 2px #9C9C9C;
+            position: absolute;
+            top: 500px;
+            left: 160px;
+            margin: 15px 0 0 15px;
+            animation: slideDown 1s ease forwards;
+            /* Existing CSS properties remain the same */
+            font-family: '휴먼편지체';
+        }
+
+            aside {
+                float: none;
+                width: 50%;
+            }
+
+            .container2 {
+            background-image: url("./img/bgbg2.png");
+            background-size: cover;
+            /* 이미지를 컨테이너에 가득 채우도록 조절 */
+            background-color: #ffffff;
+            border-radius: 10px;
+            width: 390px;
+            height: 575px;
+            border: solid 2px #9C9C9C;
+            position: absolute;
+            top: -575px;
+            /* 초기 위치를 위로 이동시킴 */
+            left: 700px;
+            margin: 15px 0 0 15px;
+            animation: slideDown 1s ease forwards;
+            /* Existing CSS properties remain the same */
+            font-family: '휴먼편지체';
+        }
+
+            section {
+                clear: both;
+                float: none;
+                width: 100%;
+                height: 30px;
+            }
+
+            .container3 {
+            background-image: url("./img/bgbg3.png");
+            background-size: cover;
+            /* 이미지를 컨테이너에 가득 채우도록 조절 */
+            background-color: #ffffff;
+            border-radius: 10px;
+            width: 390px;
+            height: 575px;
+            border: solid 2px #9C9C9C;
+            position: absolute;
+            left: 430px;
+            margin: 700px 0 0 15px;
+            animation: slideDown 1s ease forwards;
+            /* Existing CSS properties remain the same */
+            font-family: '휴먼편지체';
+        }
+
+
+            footer li {
+                margin: 37px 100px;
+            }
+        }
+
+        /* 화면 넓이가 0~768x */
+        @media (max-width: 768px) {
+            #wrap {
+                width: 100%;
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+
+            header {
+                width: 100%;
+                height: 360px;
+            }
+
+            header img {
+                width: 65px;
+            }
+
+            #logo {
+                margin-left: 20px;
+                margin-top: 15px;
+            }
+
+            #logo img:hover {
+                width: 60px;
+            }
+
+            #main_menu {
+                width: 100%;
+                text-align: center;
+            }
+
+            #main_menu li {
+                width: 100%;
+                padding: 10px;
+                display: block;
+                margin-left: 55px;
+                text-align: center;
+            }
+
+            #main_menu a {
+                font-size: 20px;
+            }
+            nav {
+                float: none;
+                width: 100%;
+                height: 550px;
+            }
+            aside {
+                float: none;
+                width: 100%;
+                height: 650px;
+            }
+
+            section {
+                float: none;
+                width: 100%;
+                height: 750px;
+            }
+
+            .container1 {
+            background-image: url("./img/bgbg1.png");
+            background-size: cover;
+            /* 이미지를 컨테이너에 가득 채우도록 조절 */
+            border-radius: 10px;
+            width: 390px;
+            height: 575px;
+            border: solid 2px #9C9C9C;
+            position: absolute;
+            top: 500px;
+            left: 30px;
+            margin: 150px 0 0 15px;
+            animation: slideDown 1s ease forwards;
+            /* Existing CSS properties remain the same */
+            font-family: '휴먼편지체';
+        }
+            .container2 {
+            background-image: url("./img/bgbg2.png");
+            background-size: cover;
+            /* 이미지를 컨테이너에 가득 채우도록 조절 */
+            background-color: #ffffff;
+            border-radius: 10px;
+            width: 390px;
+            height: 575px;
+            border: solid 2px #9C9C9C;
+            position: absolute;
+            top: -575px;
+            /* 초기 위치를 위로 이동시킴 */
+            left: 30px;
+            margin: 800px 0 0 15px;
+            animation: slideDown 1s ease forwards;
+            /* Existing CSS properties remain the same */
+            font-family: '휴먼편지체';
+        }
+            .container3 {
+            background-image: url("./img/bgbg3.png");
+            background-size: cover;
+            /* 이미지를 컨테이너에 가득 채우도록 조절 */
+            background-color: #ffffff;
+            border-radius: 10px;
+            width: 390px;
+            height: 575px;
+            border: solid 2px #9C9C9C;
+            position: absolute;
+            left: 30px;
+            margin: 1450px 0 0 15px;
+            animation: slideDown 1s ease forwards;
+            /* Existing CSS properties remain the same */
+            font-family: '휴먼편지체';
+        }
+
+            footer li {
+                margin: 37px 10px;
+                font-size: 15px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div id="logo">
+                <a href="index.html">
+                    <img src="./img/logo.png" alt="" width="130">
+                </a>
+            </div>
+            <ul id="main_menu">
+                <li><a href="page1.html">1일차</a></li>
+                <li><a href="page2.html">2일차</a></li>
+                <li><a href="page3.html">가계부</a></li>
+                <li><a href="page4.html">갤러리</a></li>
+                <li><a href="page5.html">추천</a></li>
+            </ul>
+        </header>
+
+        <nav>
+            <div class="container1" id="container1">
+                <div class="contnet1">
+                    <h1>하미마미</h1>
+                    <p>이 유튜버는 일상 브이로그 같은 느낌이지만 <br> <br>
+                        그날 해먹은 음식이라던지 그런 사소한 것들을 <br> <br>
+                        자세하게 보여주어 일상도 볼 수 있을 뿐더러 음식의 <br> <br>
+                        재료나 만드는 법을 보며 참고할 수 있어 좋다. <br> <br>
+                        요리도 보고 일상생활도 보니 그에 맞는 꿀팁같은 <br> <br>
+                        것들이 보여져 실생활에도 적용하기에 좋다. <br><br><br>
+
+                        추천 : ★★★★☆</p>
+
+                    <button>보러가기</button>
+                </div>
+
+            </div>
+        </nav>
+        <aside>
+            <div class="container2" id="container1">
+                <div class="contnet2">
+                    <h1>Nebom 사계절의 네봄</h1>
+                    <p>이 유튜버는 세명 중 가장 친근하게 다가오는 느낌이 <br><br>
+                        든다. 친구가 자취방에서 요리해주는 느낌이 들며 요리 <br><br>
+                        의 정석인 느낌은 아니지만 적은 재료로 여러가지의 <br> <br>
+                        메뉴의 조합 등 다양하게 음식들을 보여주고 자취하는 <br><br>
+                        사람같지않게 골고루 잘 만들어 먹어 신기하다. <br><br><br>
+
+                        추천 : ★★★★★</p>
+                    <button>보러가기</button>
+                </div>
+
+            </div>
+        </aside>
+        <section>
+            <div class="container3" id="container1">
+                <div class="contnet3">
+                    <h1>따뜻한 주방 Warm Kitchen</h1>
+                    <p> 도시락을 싸고싶어서 보는 유튜버는 아니지만 음식을 <br><br>
+                        만드는데에 있어 재료나 만드는 방법 등 자세하게 알 <br> <br>
+                        려주며 영상미도 감성넘쳐 굳이 음식 만들때 참고하려 <br> <br>
+                        보지 않아도 힐링까지 되는 영상이다. 이 영상을 보면 <br><br>
+                        서 그 다음 날 다양한 음식을 해먹어볼 수 있어 좋다. <br><br><br>
+
+                        추천 : ★★★★★</p>
+                    <button>보러가기</button>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <ul id="footer_menu">
+                <li>집밥 오선생 레시피</li>
+                <li>22161033 오나영</li>
+                <li>ony8817@kaywon.ac.kr</li>
+            </ul>
+
+        </footer>
+    </div>
+</body>
+
+</html>
